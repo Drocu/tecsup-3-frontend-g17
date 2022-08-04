@@ -1,0 +1,39 @@
+body {
+    background-color: #282c34;
+    color: skyblue;
+}
+h1 {
+    color: aliceblue;
+}
+h2 {
+    color: aliceblue;
+}
+a {
+    color: aliceblue;
+}
+
+.hero__info-link {
+    color: black;
+    background-color: skyblue;
+}
+header {
+    background-color: #20232a;
+}
+
+.hero_section-experiencia {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.hero_section-h2 {
+    color:  black;
+}
+
+.header-nav__link-logo-container~ul {
+    display: flex;
+    margin: auto;
+}
+
+header li {
+    margin: auto;
+}
