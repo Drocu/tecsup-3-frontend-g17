@@ -90,6 +90,7 @@
     background-position: center;
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
   }
   
   .i-hero::before {
@@ -124,8 +125,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    /* gap: 0.5rem; */
+    /* gap: 1rem; */
+    gap: 0.75rem;
   }
   
   .i-hero__info-title {
@@ -189,7 +190,7 @@
     bottom: 0;
     left: 0;
     margin: 0;
-    animation: spin 10s linear 0s infinite normal forwards;
+    animation: spin 10s linear 0s infinite normal none running;
   }
   
   .i-hero__img-tech {
