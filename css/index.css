@@ -444,6 +444,11 @@
   .menu__img {
     width: 24px;
     height: 24px;
+    transition: transform 0.25s;
+  }
+
+  .menu__img:hover {
+    transform: scale(1.125);
   }
 
   .section__footer-title {
