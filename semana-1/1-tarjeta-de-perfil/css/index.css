@@ -1,0 +1,55 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --primary-text-color: #fff;
+    --primary-highlight-color: #61dafb;
+    --secondary-highlight-color: #ffd900;
+    --primary-shadow-color: #20232abd;
+}
+
+.body {
+    background-color: var(--primary-theme-color);
+    color: var(--primary-text-color);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../img/software-developer-6521720_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-color: transparent;
+    
+}
+
+.container {
+    box-shadow: 0 0 0.125rem 0.125rem var(--primary-highlight-color);
+    max-width: 320px;
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-shadow-color);  
+}
+
+.hero__img-container {
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+}
+
+.menu__link {
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+}

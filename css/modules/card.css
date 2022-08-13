@@ -12,7 +12,7 @@
 
 .card--exp {
   gap: 0.125rem;
-  border-radius: 0.5rem;
+  border-radius: var(--primary-border-radius);
   padding: 0.5rem;
   box-sizing: border-box;
   transition: background-color 0.25s;

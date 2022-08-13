@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: var(primary-theme-color);
     border: 0.125rem solid var(--primary-theme-color);
-    border-radius: 0.5rem;
+    border-radius: var(--primary-border-radius);
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 0.75rem;
