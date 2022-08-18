@@ -21,43 +21,48 @@
                 <a href="#profile">
                     <img src="./img/logo-rodrigo-40.webp" alt="logo Rodrigo Aranda" width="48"  height="48" class="nav__logo"/>
                 </a>
+                <label for="menu" class="icon icon--menu"><i class="bi bi-list"></i></label>
+                <input type="checkbox" id="menu" class="menu__checkbox"/>
                 <ul class="menu">
                     <li>
-                        <a href="#profile">Perfil</a>
+                        <a href="#profile" class="menu__link">Perfil</a>
                     </li>
                     <li>
-                        <a href="#experience">Experiencia</a>
-                    </li>
-                    <!-- <li>
-                        <a href="">Proyectos</a>
+                        <a href="#experience" class="menu__link">Experiencia</a>
                     </li>
                     <li>
-                        <a href="">Habilidades</a>
-                    </li> -->
+                        <a href="" class="menu__link">Proyectos</a>
+                    </li>
                     <li>
-                        <a href="#contact">Contacto</a>
+                        <a href="" class="menu__link">Habilidades</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="menu__link">Contacto</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <article id="profile">
-            <div>
-                <div>
-                    <h1>Rodrigo Aranda</h1>
-                    <h2>El mejor desarrollador web Frontend React del Perú</h2>
-                    <p>
-                        Estudiante del 6 ciclo de la carrera Computación e Informática, Desarrollador 
-                        Web con la biblioteca React. Apasionado del aprendizaje y del código limpio.
-                    </p>
-                    <div>
-                        <a href="https://drive.google.com/drive/folders/11PznMrNpYtLnhdy_LYUjkVpxENenSmKN?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
-                        <a href="#">Proyectos</a>
+        <article id="profile" class="section section--hero section--profile">
+            <div class="container">
+                <div class="card">
+                    <div class="card__header">
+                        <h1 class="card__title fw-800">Rodrigo Aranda</h1>
                     </div>
-                </div>
-            </div>
-            <div>
+                    <div class="card__body">
+                        <h2 class="card__subtitle fw-900">El mejor desarrollador web Frontend React del Perú</h2>
+                        <p class="card__text d-none md:d-block">
+                            Estudiante del 6 ciclo de la carrera Computación e Informática, Desarrollador 
+                            Web con la biblioteca React. Apasionado del aprendizaje y del código limpio.
+                        </p>
+                    </div>                    
+                    <div class="card__footer">
+                        <a href="https://drive.google.com/drive/folders/11PznMrNpYtLnhdy_LYUjkVpxENenSmKN?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">CV</a>
+                        <a href="#" class="button">Proyectos</a>
+                    </div>
+                </div>            
+                <div>
                 <img src="./img/rodrigo.jpg" alt="rodrigo Aranda" width="256px" height="256px" />
                 <figure>
                     <img src="./svg/css-3-svgrepo-com.svg" alt="ccs-3" width="64" height="64" />
@@ -65,6 +70,7 @@
                     <img src="./svg/javascript-logo-svgrepo-com.svg" alt="java script" width="64" height="64" />
                     <img src="./svg/react-svgrepo-com.svg" alt="react" width="64" height="64" />
                 </figure>
+                </div>
             </div>
         </article>
         <section id="experience">
@@ -143,7 +149,7 @@
     <footer class="section--headed">
         <nav class="nav">
             <div class="container container--elements">
-                <ul class="menu">
+                <ul class="men">
                     <li>
                         <a href="https://www.facebook.com/Rodtiigo" >
                             <img src="./svg/icons8-facebook-nuevo.svg" alt="facebook" width="24" height="24" class="menu__img" />

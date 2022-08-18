@@ -1,3 +1,7 @@
 @import './modules/headed.css';
 @import './modules/sections.css';
-@import './modules/menu.css'
+@import './modules/menu.css';
+@import './modules/card.css';
+@import './modules/button.css';
+
+@import './modules/utils.css';
