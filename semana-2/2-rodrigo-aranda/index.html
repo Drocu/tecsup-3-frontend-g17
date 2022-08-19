@@ -21,20 +21,20 @@
                 <a href="#profile">
                     <img src="./img/logo-rodrigo-40.webp" alt="logo Rodrigo Aranda" width="48"  height="48" class="nav__logo"/>
                 </a>
-                <label for="menu" class="icon icon--menu"><i class="bi bi-list"></i></label>
-                <input type="checkbox" id="menu" class="menu__checkbox"/>
+                <label for="menu" class="icon md:d-none"><i class="bi bi-list"></i></label>
+                <input placeholder="menu" type="checkbox" id="menu" class="menu-checkbox d-none" />
                 <ul class="menu">
                     <li>
                         <a href="#profile" class="menu__link">Perfil</a>
                     </li>
                     <li>
-                        <a href="#experience" class="menu__link">Experiencia</a>
+                        <a href="#experiences" class="menu__link">Experiencia</a>
                     </li>
                     <li>
-                        <a href="" class="menu__link">Proyectos</a>
+                        <a href="#" class="menu__link">Proyectos</a>
                     </li>
                     <li>
-                        <a href="" class="menu__link">Habilidades</a>
+                        <a href="#" class="menu__link">Habilidades</a>
                     </li>
                     <li>
                         <a href="#contact" class="menu__link">Contacto</a>
@@ -45,102 +45,110 @@
     </header>
     <main>
         <article id="profile" class="section section--hero section--profile">
-            <div class="container">
+            <div class="container container--hero">
                 <div class="card">
                     <div class="card__header">
-                        <h1 class="card__title fw-800">Rodrigo Aranda</h1>
+                        <h1 class="card__title">Rodrigo Aranda</h1>
                     </div>
                     <div class="card__body">
-                        <h2 class="card__subtitle fw-900">El mejor desarrollador web Frontend React del Perú</h2>
+                        <h2 class="card__subtitle">El mejor desarrollador web Frontend React del Perú</h2>
                         <p class="card__text d-none md:d-block">
                             Estudiante del 6 ciclo de la carrera Computación e Informática, Desarrollador 
                             Web con la biblioteca React. Apasionado del aprendizaje y del código limpio.
                         </p>
                     </div>                    
                     <div class="card__footer">
-                        <a href="https://drive.google.com/drive/folders/11PznMrNpYtLnhdy_LYUjkVpxENenSmKN?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">CV</a>
-                        <a href="#" class="button">Proyectos</a>
+                        <a href="https://drive.google.com/drive/folders/11PznMrNpYtLnhdy_LYUjkVpxENenSmKN?usp=sharing" class="button button--lg button--primary" target="_blank" rel="noopener noreferrer">CV</a>
+                        <a href="#" class="button button--lg button--primary button--outline">Proyectos</a>
                     </div>
                 </div>            
-                <div>
-                <img src="./img/rodrigo.jpg" alt="rodrigo Aranda" width="256px" height="256px" />
-                <figure>
-                    <img src="./svg/css-3-svgrepo-com.svg" alt="ccs-3" width="64" height="64" />
-                    <img src="./svg/icons8-html-5.svg" alt="html-5" width="64" height="64" />
-                    <img src="./svg/javascript-logo-svgrepo-com.svg" alt="java script" width="64" height="64" />
-                    <img src="./svg/react-svgrepo-com.svg" alt="react" width="64" height="64" />
+                <div class="hero-img">
+                <img src="./img/rodrigo.jpg" alt="rodrigo Aranda" width="256" height="256" class="hero-img__img" />
+                <figure class="hero-img__decorators">
+                    <img src="./svg/css-3-svgrepo-com.svg" alt="ccs-3" width="64" height="64" class="hero-img__decorator" />
+                    <img src="./svg/icons8-html-5.svg" alt="html-5" width="64" height="64" class="hero-img__decorator" />
+                    <img src="./svg/javascript-logo-svgrepo-com.svg" alt="java script" width="64" height="64" class="hero-img__decorator" />
+                    <img src="./svg/react-svgrepo-com.svg" alt="react" width="64" height="64" class="hero-img__decorator" />
                 </figure>
                 </div>
             </div>
         </article>
-        <section id="experience">
-            <div>
-                <h2>Experiencias</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Empresa</th>
-                            <th>Cargo</th>
-                            <th>Funciones</th>
-                            <th>Periodo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Soluciones digitales MNED</td>
-                            <td>Atención al Cliente teléfono</td>
-                            <td>
-                                <ul>
-                                    <li>Ventas de servicios de Páginas Web</li>
-                                    <li>Ventas de servicios Tiendas Virtuales</li>
-                                    <li>Ventas de servicios Publicidad en Redes Sociales</li>
-                                </ul>
-                            </td>
-                            <td>09/06/2022- ACTUALIDAD</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>A365</td>
-                            <td> Ventas por teléfono</td>
-                            <td>
-                                <ul>
-                                    <li>Vender servicios de internet hogar de Claro</li>
-                                    <li>Renovacion de lineas para clientes Claro</li>
-                                    <li>Portabilidad de otros operadores a Claro</li>
-                                </ul>
-                            </td>
-                            <td>19/03/2022- 02/06/2022</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td> LIBRERIAS GRAFISUR</td>
-                            <td> Atención al Cliente</td>
-                            <td>
-                                <ul>
-                                    <li>Ventas de productos de oficina, universitario y escolar.</li>
-                                    <li>Caja</li>
-                                </ul>
-                            </td>
-                            <td>15/04/2018-01/03/2022 </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="5">
-                                <a href="https://www.linkedin.com/in/rodrigo-aranda-78ab90233/">Ver más Experiencia</a>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+        <section id="experiences" class="section">
+            <div class="container container--element">
+                <h2 class="section__title">👨‍💻 Experiencias 👨‍💻</h2>
+                <div class="table--responsive">
+                    <table class="table">
+                        <thead class="table__header">
+                            <tr>
+                                <th class="table__cell">N°</th>
+                                <th class="table__cell">Empresa</th>
+                                <th class="table__cell">Cargo</th>
+                                <th class="table__cell">Funciones</th>
+                                <th class="table__cell">Periodo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">Soluciones digitales MNED</td>
+                                <td class="table__cell">Atención al Cliente teléfono</td>
+                                <td class="table__cell">
+                                    <ul>
+                                        <li>Ventas de servicios de Páginas Web</li>
+                                        <li>Ventas de servicios Tiendas Virtuales</li>
+                                        <li>Ventas de servicios Publicidad en Redes Sociales</li>
+                                    </ul>
+                                </td>
+                                <td class="table__cell">09/06/2022- ACTUALIDAD</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">2</td>
+                                <td class="table__cell">A365</td>
+                                <td class="table__cell"> Ventas por teléfono</td>
+                                <td class="table__cell">
+                                    <ul>
+                                        <li>Vender servicios de internet hogar de Claro</li>
+                                        <li>Renovacion de lineas para clientes Claro</li>
+                                        <li>Portabilidad de otros operadores a Claro</li>
+                                    </ul>
+                                </td>
+                                <td class="table__cell">19/03/2022- 02/06/2022</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">3</td>
+                                <td class="table__cell"> LIBRERIAS GRAFISUR</td>
+                                <td class="table__cell"> Atención al Cliente</td>
+                                <td class="table__cell">
+                                    <ul>
+                                        <li>Ventas de productos de oficina, universitario y escolar.</li>
+                                        <li>Caja</li>
+                                    </ul>
+                                </td>
+                                <td class="table__cell">15/04/2018-01/03/2022 </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table__footer">
+                            <tr>
+                                <td class="table__cell" colspan="5">
+                                    <a href="https://www.linkedin.com/in/rodrigo-aranda-78ab90233/" target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="button button--secondary">
+                                    Ver más Experiencia
+                                </a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+                
             </div>
         </section>
-        <section id="contact">
-            <div>
+        <section id="contact" class="section">
+            <div class="container container--element">
                 <h2>📞 Contacto 📞</h2>
-                <form action="">
-                    <input type="tel" placeholder="Celular">
+                <form>
+                    <input type="tel" placeholder="Celular" />
                     <button>Contactar</button>
                 </form>
             </div>
@@ -176,9 +184,9 @@
                         </a>
                     </li>
                 </ul>
-                <h2 class="footer__title">
+                <h2 >
                     👨‍💻 Copyright &copy; 2022 
-                    <a href="https://github.com/Drocu" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    <a href="https://github.com/Drocu" target="_blank" rel="noopener noreferrer">
                         Rodrigo Aranda</a> 
                     Todos los derechos reservados. 👨‍💻</h2>
             </div>

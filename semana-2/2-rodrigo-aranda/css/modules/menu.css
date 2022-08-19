@@ -1,7 +1,6 @@
-.icon {
-    font-size: 1.75rem;
-    cursor: pointer;
-}
+.menu-checkbox:checked+.menu {
+    transform: translateX(0);
+  }
 
 .menu {
     position: fixed;
@@ -22,19 +21,12 @@
     transition: transform 0.25s;
 }
 
-.menu__checkbox {
-    display: none;
-}
-
-.menu__checkbox:checked+.menu {
-    transform: translateX(0);
-}
-
 .menu__link {
     position: relative; /*es para darle el estilo de subrayadp al menu__link::before*/
     color: var(--primary-text-color);
-    font-size: 600;
+    font-weight: 700;
     text-decoration: none;
+    transition: color 0.25s;
 }
 
 .menu__link:hover {
@@ -58,15 +50,12 @@
 }
 
 @media (min-width: 768px) {
-    .icon--menu {
-        display: none;
-    }
-
     .menu {
         position: static;
         width: auto;
         height: auto;
         flex-direction: row;
+        gap: 1rem;
         background-color: transparent;
         transform: translateX(0);
     }
