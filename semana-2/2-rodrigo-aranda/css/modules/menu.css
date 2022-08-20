@@ -1,6 +1,6 @@
 .menu-checkbox:checked+.menu {
     transform: translateX(0);
-  }
+}
 
 .menu {
     display: flex;
@@ -66,17 +66,17 @@
 
 @media (min-width: 768px) {
     .menu {
-      position: static;
-      width: auto;
-      height: auto;
-      flex-direction: row;
-      gap: 1rem;
-      background-color: transparent;
-      transform: translateX(0);
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: transparent;
+    transform: translateX(0);
     }
-  
+    
     .menu__img {
-      width: 48px;
-      height: 48px;
+    width: 48px;
+    height: 48px;
     }
-  }
+}

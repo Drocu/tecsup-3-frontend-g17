@@ -27,6 +27,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .nav__action {
@@ -72,6 +73,15 @@
 }
 
 @media (min-width: 756px) {
+    .nav {
+        --scale-menu: scale(0);
+        --translate-x-menu: translateX(0);
+    }
+    
+    .nav:target {
+        --scale-close: scale(0);
+    }
+    
     .footer__title {
         font-size: 0.875rem;
     }

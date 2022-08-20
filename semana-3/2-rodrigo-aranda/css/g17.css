@@ -7,5 +7,8 @@
 @import './modules/table.css';
 @import './modules/list.css';
 @import './modules/form.css';
+@import './modules/animation.css';
+@import './modules/variables.css';
+@import './modules/wave.css';
 
 @import './modules/utils.css';

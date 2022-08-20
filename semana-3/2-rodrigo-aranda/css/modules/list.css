@@ -8,7 +8,7 @@
   }
   
   .list__item {
-    border-bottom: 0.0625rem solid var(--secondary-text-color);
+    border-bottom: 0.0625rem solid var(--reverse-primary-text-color);
     padding: 0.5rem;
     transition: background-color 0.25s;
   }

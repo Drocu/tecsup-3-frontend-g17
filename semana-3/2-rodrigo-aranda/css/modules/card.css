@@ -1,9 +1,11 @@
 .card {
     z-index: 5;
-    border: 0.0625rem solid var(--primary-highlight-color);
+    /* border: 0.0625rem solid var(--primary-highlight-color); */
+    box-shadow: 0 0 0.125rem 0.125rem var(--primary-highlight-color);
     border-radius: var(--primary-border-radius);
     overflow: hidden;
     max-width: 320px;
+    transition:  box-shadow 0.25s;
   }
   
   .card__header {
