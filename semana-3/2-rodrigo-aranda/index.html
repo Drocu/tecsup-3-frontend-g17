@@ -16,13 +16,15 @@
 </head>
 <body class="body">
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <div class="container container--nav-r">
                 <a href="#profile">
                     <img src="./img/logo-rodrigo-40.webp" alt="logo Rodrigo Aranda" width="48"  height="48" class="nav__logo"/>
                 </a>
-                <label for="menu" class="icon md:d-none"><i class="bi bi-list"></i></label>
-                <input placeholder="menu" type="checkbox" id="menu" class="menu-checkbox d-none" />
+                <!-- <label for="menu" class="icon md:d-none"><i class="bi bi-list"></i></label>
+                <input placeholder="menu" type="checkbox" id="menu" class="menu-checkbox d-none" /> -->
+                <a href="#nav" class="nav__action nav__action--menu"><i class="bi bi-list"></i></a>
+                <a href="#" class="nav__action nav__action--close"><i class="bi bi-x-circle"></i></a>
                 <ul class="menu menu--header">
                     <li>
                         <a href="#profile" class="menu__link">Perfil</a>

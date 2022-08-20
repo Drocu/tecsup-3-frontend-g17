@@ -3,6 +3,10 @@
     padding-bottom: var(--padding-section);
 }
 
+.section--secondary {
+    background-color: var(--secondary-theme-color);
+}
+
 .section--hero {
     display: flex;
     align-items: center;
@@ -43,7 +47,8 @@
 }
 
 .container--nav-r {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-between;
 }
