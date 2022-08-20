@@ -23,7 +23,7 @@
                 </a>
                 <label for="menu" class="icon md:d-none"><i class="bi bi-list"></i></label>
                 <input placeholder="menu" type="checkbox" id="menu" class="menu-checkbox d-none" />
-                <ul class="menu">
+                <ul class="menu menu--header">
                     <li>
                         <a href="#profile" class="menu__link">Perfil</a>
                     </li>
@@ -76,7 +76,7 @@
         <section id="experiences" class="section">
             <div class="container container--element">
                 <h2 class="section__title">👨‍💻 Experiencias 👨‍💻</h2>
-                <div class="table--responsive">
+                <div class="table-responsive">
                     <table class="table">
                         <thead class="table__header">
                             <tr>
@@ -93,10 +93,10 @@
                                 <td class="table__cell">Soluciones digitales MNED</td>
                                 <td class="table__cell">Atención al Cliente teléfono</td>
                                 <td class="table__cell">
-                                    <ul>
-                                        <li>Ventas de servicios de Páginas Web</li>
-                                        <li>Ventas de servicios Tiendas Virtuales</li>
-                                        <li>Ventas de servicios Publicidad en Redes Sociales</li>
+                                    <ul class="list">
+                                        <li class="list__item">Ventas de servicios de Páginas Web</li>
+                                        <li class="list__item">Ventas de servicios Tiendas Virtuales</li>
+                                        <li class="list__item">Ventas de servicios Publicidad en Redes Sociales</li>
                                     </ul>
                                 </td>
                                 <td class="table__cell">09/06/2022- ACTUALIDAD</td>
@@ -106,10 +106,10 @@
                                 <td class="table__cell">A365</td>
                                 <td class="table__cell"> Ventas por teléfono</td>
                                 <td class="table__cell">
-                                    <ul>
-                                        <li>Vender servicios de internet hogar de Claro</li>
-                                        <li>Renovacion de lineas para clientes Claro</li>
-                                        <li>Portabilidad de otros operadores a Claro</li>
+                                    <ul class="list">
+                                        <li class="list__item">Vender servicios de internet hogar de Claro</li>
+                                        <li class="list__item">Renovacion de lineas para clientes Claro</li>
+                                        <li class="list__item">Portabilidad de otros operadores a Claro</li>
                                     </ul>
                                 </td>
                                 <td class="table__cell">19/03/2022- 02/06/2022</td>
@@ -119,9 +119,9 @@
                                 <td class="table__cell"> LIBRERIAS GRAFISUR</td>
                                 <td class="table__cell"> Atención al Cliente</td>
                                 <td class="table__cell">
-                                    <ul>
-                                        <li>Ventas de productos de oficina, universitario y escolar.</li>
-                                        <li>Caja</li>
+                                    <ul class="list">
+                                        <li class="list__item">Ventas de productos de oficina, universitario y escolar.</li>
+                                        <li class="list__item">Caja</li>
                                     </ul>
                                 </td>
                                 <td class="table__cell">15/04/2018-01/03/2022 </td>
@@ -146,18 +146,20 @@
         </section>
         <section id="contact" class="section">
             <div class="container container--element">
-                <h2>📞 Contacto 📞</h2>
-                <form>
-                    <input type="tel" placeholder="Celular" />
-                    <button>Contactar</button>
+                <h2 class="section__title">📞 Contacto 📞</h2>
+                <form class="form">
+                    <div class="form__group">
+                        <input type="tel" placeholder="Celular" class="form__input" pattern="[0-9]+" title="Ingresar un número de celular" required />
+                        <button class="button button--primary b-radius-none">Contactar</button>
+                    </div> 
                 </form>
             </div>
         </section>
     </main>
-    <footer class="section--headed">
+    <footer class="footer">
         <nav class="nav">
-            <div class="container container--elements">
-                <ul class="men">
+            <div class="container container--element">
+                <ul class="menu">
                     <li>
                         <a href="https://www.facebook.com/Rodtiigo" >
                             <img src="./svg/icons8-facebook-nuevo.svg" alt="facebook" width="24" height="24" class="menu__img" />
@@ -184,9 +186,9 @@
                         </a>
                     </li>
                 </ul>
-                <h2 >
+                <h2 class="footer__title">
                     👨‍💻 Copyright &copy; 2022 
-                    <a href="https://github.com/Drocu" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Drocu" target="_blank" rel="noopener noreferrer" class="footer__link">
                         Rodrigo Aranda</a> 
                     Todos los derechos reservados. 👨‍💻</h2>
             </div>

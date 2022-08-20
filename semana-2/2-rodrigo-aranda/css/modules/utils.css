@@ -1,6 +1,10 @@
 .d-none {
     display: none;
   }
+
+  .b-radius-none {
+    border-radius: 0;
+  }
   
   @media (min-width: 768px) {
     .md\:d-none {
