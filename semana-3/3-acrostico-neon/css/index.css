@@ -1,0 +1,11 @@
+@import './modules/variable.css';
+@import './modules/section.css';
+@import './modules/animation.css';
+
+
+.body {
+    background-color: var(--primary-theme-color);
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    margin: 0;
+}
