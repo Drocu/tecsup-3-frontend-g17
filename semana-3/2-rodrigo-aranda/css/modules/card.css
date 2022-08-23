@@ -7,6 +7,10 @@
     max-width: 320px;
     transition:  box-shadow 0.25s;
   }
+
+  .card:hover {
+    box-shadow: 0 0 0.125rem 0.125rem var(--primary-highlight-color);
+  }
   
   .card__header {
     background-color: var(--primary-shadow-color);

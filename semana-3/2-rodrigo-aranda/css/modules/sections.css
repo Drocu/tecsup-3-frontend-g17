@@ -78,6 +78,12 @@
     gap: var(--padding-section);
 }
 
+.element {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-section);
+}
+
 @media (min-width: 768px) {
     .container--hero{
         flex-direction: row;

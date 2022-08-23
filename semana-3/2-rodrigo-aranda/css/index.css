@@ -5,11 +5,4 @@
     margin: 0;
 }
 
-@media (min-width: 768px) {
-    :root {
-      --padding-section: 2rem;
-      --padding-container:  0.75rem;
-      --max-width-container: 1024px;
-    }
-  }
 

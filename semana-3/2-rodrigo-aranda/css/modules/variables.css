@@ -20,3 +20,11 @@
     --max-width-container: 640px;
     --primary-border-radius: 1rem;
 }
+
+@media (min-width: 768px) {
+    :root {
+    --padding-section: 2rem;
+    --padding-container: 0.75rem;
+    --max-width-container: 1024px;
+    }
+}
