@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.card {
+  box-shadow: 0 0 0.125rem 0.125rem var(--primary-highlight-color);
+  box-sizing: border-box;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
+  transition: box-shadow 0.25s;
+}
+@media (min-width: 768px) {
+  .card {
+    max-width: 512px;
+  }
+}
+.card:hover {
+  box-shadow: 0 0 0.0625rem 0.0625rem var(--secondary-highlight-color), 0 0 0.125rem 0.125rem var(--secondary-highlight-color);
+}
+.card__header {
+  background-color: var(--primary-shadow-color);
+  padding: 1rem;
+  text-align: center;
+}
+.card__header-img {
+  background-color: var(--primary-shadow-color);
+  border-radius: 50%;
+  width: min(100%, 256px);
+  height: 256px;
+  object-fit: cover;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  background-color: var(--secondary-theme-color);
+  padding: 1rem;
+}
+.card__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 0 0.0625rem var(--primary-highlight-color) 0 0 0 0.125rem var(--secondary-highlight-color);
+  margin: 0;
+}
+.card__title:hover {
+  color: var(--secondary-highlight-color);
+}
+@media (min-width: 768px) {
+  .card__title {
+    font-size: 1.75rem;
+  }
+}
+.card__subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .card__subtitle {
+    font-size: 1.5rem;
+  }
+}
+.card__text {
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0;
+}
+.card__text::before {
+  content: "❤";
+}
+.card__text::after {
+  content: "❤";
+}
+.card__text:hover::before, .card__text:hover::after {
+  color: red;
+}
+@media (min-width: 768px) {
+  .card__text {
+    font-size: 1.25rem;
+  }
+}
+.card__footer {
+  background-color: var(--primary-theme-color);
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu__link {
+  display: flex;
+  color: var(--primary-text-color);
+  font-size: 1.75rem;
+  transition: transform 0.25s;
+}
+.menu__link:hover {
+  transform: scale(1.25);
+  color: var(--secondary-highlight-color);
+}
+@media (min-width: 768px) {
+  .menu__link {
+    font-size: 2rem;
+  }
+}
+
+.body {
+  background-color: var(--primary-theme-color);
+  color: var(--primary-text-color);
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  background-image: url("../img/software-developer-6521720_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=styles.css.map */

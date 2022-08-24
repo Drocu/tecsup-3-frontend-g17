@@ -1,0 +1,14 @@
+.body {
+    background-color: var(--primary-theme-color);
+    color: var(--primary-text-color);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+.hero {
+    @include d-flex-fd-ai-jc-g(row, center);
+    background-image: url('../img/software-developer-6521720_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;     
+}

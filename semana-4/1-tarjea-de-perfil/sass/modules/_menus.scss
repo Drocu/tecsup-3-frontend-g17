@@ -1,0 +1,28 @@
+.menu {
+    @include d-flex-fd-ai-jc-g(row, stretch, center, 0.75rem);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__link {
+        display: flex;
+        color: var(--primary-text-color);
+        font-size: 1.75rem;
+        transition:  transform 0.25s;
+
+        &:hover {
+            transform: scale(1.25);
+            color: var(--secondary-highlight-color);
+        }
+
+        
+    @include desktop {
+        font-size: 2rem;
+    }
+
+    }
+    
+    
+}
+
