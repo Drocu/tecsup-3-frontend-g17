@@ -1,7 +1,7 @@
 @import './modules/headed.css';
 @import './modules/sections.css';
 @import './modules/menu.css';
-@import './modules/card.css';
+@import './modules/cards';
 @import './modules/button.css';
 @import './modules/hero.css';
 @import './modules/table.css';
@@ -12,3 +12,7 @@
 @import './modules/wave.css';
 
 @import './modules/utils.css';
+
+.projects{
+    font-weight: 900;
+}
