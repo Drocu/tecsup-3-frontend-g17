@@ -1,0 +1,87 @@
+.nav {
+  --pading-nav: 1rem;
+  --translate-x-menu: translateX(100%);
+  padding-top: var(--pading-nav);
+  padding-bottom: var(--pading-nav);
+  transition: padding 0.25s;
+
+  @include desktop() {
+    --translate-x-menu: translateX(0);
+  }
+
+  &--scroll {
+    --pading-nav: 0.5rem;
+  }
+
+  &--foter {
+    padding: 1rem 0;
+  }
+
+  &--open {
+    --translate-x-menu: translateX(0);
+  }
+
+  &__logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+  &__action {
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-text-color);
+    font-size: 1.75rem;
+    padding: 0;
+    filter: contrast(75%);
+    cursor: pointer;
+    transition: filter 0.25s, transform 0.25s;
+
+    &--menu,
+    &--close {
+      @include desktop() {
+        display: none;
+      }
+    }
+
+    &--theme {
+      position: relative;
+      @include d-flex-fd-ai-jc-g(row, center, center, 0.375rem);
+      background-color: var(--secondary-theme-color);
+      border-radius: var(--primary-border-radius);
+      font-size: 0.875rem;
+      padding: 0.125rem 0.25rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-color: var(--primary-theme-color);
+        box-shadow:
+          0 0 0 0.0625rem var(--reverse-primary-shadow-color),
+          0 0 0 0.125rem var(--reverse-primary-shadow-color);
+        border-radius: 50%;
+
+        transition: left 0.25s;
+      }
+    }
+
+    &--theme-active::after {
+      left: 50%;
+    }
+
+    &:hover {
+      filter: contrast(100%);
+    }
+
+    &--close {
+      position: absolute;
+      top: calc(var(--pading-nav) + 0.5rem);
+      right: var(--padding-container);
+      transition: top 0.25s, right 0.25s;
+    }
+  }
+}

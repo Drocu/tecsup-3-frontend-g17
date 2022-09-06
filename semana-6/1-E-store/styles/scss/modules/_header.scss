@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.25s, box-shadow 0.25s;
+
+  &--scroll {
+    background-color: var(--primary-theme-color);
+    box-shadow: 0 0 0.125rem 0.125rem var(--reverse-primary-shadow-color);
+  }
+}

@@ -1,0 +1,21 @@
+@import './modules/variables.css';
+
+.body {
+  background-color: var(--primary-theme-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+  margin: 0;
+}
+
+.body--light {
+  scroll-behavior: smooth;
+  --primary-theme-color: #fff;
+  --secondary-theme-color: #eee;
+  --primary-text-color: #000;
+  --secondary-text-color: #282c34;
+  --reverse-primary-text-color: #fff;
+  --primary-shadow-color: #fff8;
+  --secondary-shadow-color: #eee8;
+  --tertiary-shadow-color: #ffffff40;
+  --reverse-primary-shadow-color: #0008;
+}

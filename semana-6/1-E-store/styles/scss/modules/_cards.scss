@@ -1,0 +1,109 @@
+.card {
+  box-shadow: 0 0 0.125rem 0 var(--reverse-primary-shadow-color);
+  border-radius: var(--primary-border-radius);
+  overflow: hidden;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: 0 0 0.125rem 0 var(--primary-highlight-color);
+  }
+
+  &--hero {
+    z-index: 5;
+    box-shadow: 0 0 0.125rem 0.125rem var(--reverse-primary-shadow-color);
+    max-width: 320px;
+    text-align: center;
+
+    @include desktop() {
+      max-width: 512px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0.125rem 0.125rem var(--primary-highlight-color);
+    }
+  }
+
+  &__img {
+    display: block;
+    background-color: var(--primary-theme-color);
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  &__header {
+    background-color: var(--primary-shadow-color);
+    padding: 0.5rem 1rem;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.375rem;
+    margin: 0;
+
+    @include desktop() {
+      font-size: 1.5rem;
+    }
+
+    &--lg {
+      font-size: 1.5rem;
+
+      @include desktop() {
+        font-size: 1.625rem;
+      }
+    }
+  }
+
+  &__body {
+    @include d-flex-fd-ai-jc-g(column, stretch, flex-start, 0.25rem);
+    background-color: var(--secondary-shadow-color);
+    padding: 1rem;
+
+    &--lg {
+      gap: 0.5rem;
+    }
+  }
+
+
+  &__subtitle {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin: 0;
+
+    @include desktop() {
+      font-size: 1.375rem;
+    }
+
+    &--lg {
+      font-size: 1.375rem;
+
+      @include desktop() {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--sm {
+      font-size: 1.125rem;
+
+      @include desktop() {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin: 0;
+
+    @include desktop() {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__footer {
+    background-color: var(--primary-shadow-color);
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,36 @@
+.form {
+    @include d-flex-fd-ai-jc-g(column, stretch, flex-start, 1rem);
+  
+    &__group {
+      @include d-flex-fd-ai-jc-g;
+      box-shadow:
+        0 0 0 0.125rem var(--reverse-primary-shadow-color),
+        0 0 0 0.25rem var(--reverse-primary-shadow-color);
+      border-radius: var(--primary-border-radius);
+      overflow: hidden;
+      transition: box-shadow 0.25s;
+  
+      &:hover {
+        box-shadow:
+          0 0 0 0.125rem var(--primary-highlight-color),
+          0 0 0 0.25rem var(--primary-highlight-color);
+      }
+    }
+  
+    &__input {
+      background-color: transparent;
+      border: none;
+      color: var(--primary-text-color);
+      font-size: 1rem;
+      padding: 0.5em;
+      transition: color 0.25s;
+  
+      &:invalid {
+        color: var(--primary-invalid-color);
+      }
+  
+      &::placeholder {
+        color: var(--secondary-text-color);
+      }
+    }
+  }

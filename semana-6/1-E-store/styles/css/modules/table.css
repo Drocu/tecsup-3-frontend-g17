@@ -1,0 +1,36 @@
+.table-responsive {
+    width: 100%;
+    box-shadow: 0 0 0.125rem 0 var(--reverse-primary-shadow-color);
+    overflow: auto;
+  }
+  
+  .table {
+    background-color: var(--tertiary-shadow-color);
+  }
+  
+  .table__header {
+    background-color: var(--tertiary-shadow-color);
+    text-shadow: 0 0 0.0625rem var(--secondary-highlight-color);
+    color: var(--primary-highlight-color);
+  }
+  
+  .table__cell {
+    padding: 0.5rem;
+  }
+  
+  .table__row:nth-child(odd) {
+    background-color: var(--primary-shadow-color);
+  }
+  
+  .table__row:nth-child(even) {
+    background-color: var(--secondary-shadow-color);
+  }
+  
+  .table__row:hover {
+    filter: brightness(112.5%)
+  }
+  
+  .table__footer {
+    background-color: var(--tertiary-shadow-color);
+    text-align: center;
+  }

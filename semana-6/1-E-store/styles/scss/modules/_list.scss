@@ -1,0 +1,24 @@
+.list {
+    @include d-flex-fd-ai-jc-g(column);
+    border-radius: var(--primary-border-radius);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .list__item {
+    border-bottom: 0.0625rem solid var(--tertiary-shadow-color);
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.25s;
+  }
+  
+  .list__item:hover {
+    background-color: var(--secondary-theme-color);
+  }
+  
+  .list__item:last-child {
+    border-bottom: 0;
+  }

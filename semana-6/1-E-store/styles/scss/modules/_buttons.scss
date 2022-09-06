@@ -1,0 +1,65 @@
+.buttons {
+  @include d-flex-fd-ai-jc-g(row, center, center, 0.5rem);
+
+  @include desktop() {
+    gap: 1rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-theme-color);
+  border: 0.0625rem solid var(--primary-theme-color);
+  border-radius: var(--primary-border-radius);
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: var(--primary-font-family);
+  text-decoration: none;
+  padding: 0.25em 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  @include desktop() {
+    font-size: 1.125rem;
+  }
+
+  &--lg {
+    font-size: 1.125rem;
+
+    @include desktop() {
+      font-size: 1.25rem;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.25rem 0.25rem var(--primary-theme-color);
+    filter: brightness(112.5%);
+  }
+
+  &--primary {
+    background-color: var(--primary-button-color);
+    border: 0.0625rem solid var(--primary-button-color);
+    color: var(--reverse-primary-text-color);
+
+    &:hover {
+      box-shadow: 0 0 0.5rem 0 var(--primary-button-color);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary-button-color);
+    border: 0.0625rem solid var(--secondary-button-color);
+    color: var(--reverse-primary-text-color);
+
+    &:hover {
+      box-shadow: 0 0 0.5rem 0 var(--secondary-button-color);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--primary-text-color);
+  }
+}
