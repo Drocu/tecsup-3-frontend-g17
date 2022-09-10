@@ -6,3 +6,8 @@
     font-family: var(--primary-font-family);
     margin: 0;
 }
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+  }

@@ -1,12 +1,30 @@
+.section {
+    &--hero{
+        position: relative;
+        min-height: 100vh;
+        background-color: var(--primary-shadow-color);
+        background-size: cover;
+        background-position: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--reverse-primary-shadow-color);
+        }
+    }
+}
+
 .container{
-    max-width: var(--max-widht-container);
+    max-width: var(--max-width-container);
     margin: 0 auto;
     padding-left: var(--padding-container);
     padding-right: var(--padding-container);
 
     &--header-nav{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include d-flex-fd-ai-jc-g(row,center,space-between);
     }
 }

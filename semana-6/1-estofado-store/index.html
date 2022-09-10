@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body class="body">
     <header class="header">
@@ -21,7 +22,7 @@
                 <a href="./">
                     <img src="https://img.icons8.com/stickers/100/000000/lion.png" alt="leon_logo"  class="nav__logo"/>
                 </a>
-                <button-name  class="nav__action " id="navActionMenu">
+                <button-name  class="nav__action nav__action--menu" id="navActionMenu">
                     <i class="bi bi-list-ul"></i>
                 </button-name>
                 <ul class="menu menu--header" id="menu">
@@ -34,7 +35,28 @@
             </div>
         </nav>
     </header>
-    
+    <main>
+            <section class="swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide section section--hero" 
+                    style="background-image: url('https://images4.alphacoders.com/710/710615.jpg');"></div>
+                <div class="swiper-slide section section--hero" 
+                    style="background-image: url('https://images7.alphacoders.com/902/902283.jpg');"></div>
+                <div class="swiper-slide section section--hero" 
+                    style="background-image: url('https://images2.alphacoders.com/533/533009.jpg');"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </section>
+    </main>
     <script src="./js/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

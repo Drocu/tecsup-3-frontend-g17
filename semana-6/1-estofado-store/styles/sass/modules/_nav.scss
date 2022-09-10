@@ -4,6 +4,10 @@
     padding-top: var(--padding-nav);
     padding-bottom: var(--padding-nav);
 
+    @include desktop{
+        --translate-menu:0%;
+    }
+
     &--open {
         --translate-menu:0%;
     }
@@ -22,6 +26,13 @@
         font-size: 1.75rem;
         padding: 0;
         cursor: pointer;
+
+        &--menu,
+        &--close{
+            @include desktop{
+                display: none;
+            }
+        }
 
         &--close {
             position: absolute;
