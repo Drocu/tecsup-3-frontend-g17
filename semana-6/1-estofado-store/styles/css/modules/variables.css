@@ -1,0 +1,17 @@
+:root{
+    scroll-behavior: smooth;
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --primary-text-color: #fff;
+    --primary-highlight-color: #61dafb;
+    --primary-font-family: 'Open Sans', sans-serif;
+    --padding-container: 1rem;
+    --max-width-container:640px;
+}
+
+@media (min-width: 768px){
+    :root{
+        --padding-container: 0.75rem;
+        --max-width-container: 1024px;
+    }
+}
