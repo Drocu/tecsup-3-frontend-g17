@@ -8,8 +8,12 @@
 
 .nav {
   --padding-nav:1rem;
+  --translate-menu: 100%;
   padding-top: var(--padding-nav);
   padding-bottom: var(--padding-nav);
+}
+.nav--open {
+  --translate-menu:0%;
 }
 .nav__logo {
   display: block;
@@ -61,7 +65,8 @@
   justify-content: center;
   gap: 1.5rem;
   background-image: linear-gradient(var(--primary-theme-color), var(--secondary-theme-color));
-  transform: translateX(100%);
+  transform: translateX(var(--translate-menu));
+  transition: transform 0.25s;
 }
 .menu__link {
   color: var(--primary-text-color);

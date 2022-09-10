@@ -16,7 +16,8 @@
         justify-content: center;
         gap: 1.5rem;
         background-image: linear-gradient(var(--primary-theme-color), var(--secondary-theme-color));
-        transform: translateX(100%);
+        transform: translateX(var(--translate-menu));
+        transition: transform 0.25s;
     }
 
     &__link{

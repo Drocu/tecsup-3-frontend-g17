@@ -1,8 +1,12 @@
 .nav{
     --padding-nav:1rem;
+    --translate-menu: 100%;
     padding-top: var(--padding-nav);
     padding-bottom: var(--padding-nav);
 
+    &--open {
+        --translate-menu:0%;
+    }
 
     &__logo{
         display: block;

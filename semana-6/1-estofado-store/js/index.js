@@ -1,7 +1,9 @@
 'use strict';
 
+import header from "./modules/header.js";
+
 const documentReady = () => {
-    alert('Hola mundo');
+    header();
 };
 
 document.addEventListener('DOMContentLoaded', documentReady);
