@@ -69,6 +69,7 @@
   transition: transform 0.25s;
 }
 .menu__link {
+  position: relative;
   color: var(--primary-text-color);
   font-weight: 600;
   text-decoration: none;
@@ -76,6 +77,19 @@
 }
 .menu__link:hover {
   color: var(--primary-highlight-color);
+}
+.menu__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 0.0625rem;
+  background-color: var(--secondary-highlight-color);
+  transition: width 0.25s;
+}
+.menu__link:hover:before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=fe.css.map */
