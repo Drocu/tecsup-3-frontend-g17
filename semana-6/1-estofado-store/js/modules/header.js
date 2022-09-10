@@ -2,6 +2,8 @@ const header = () => {
     const navActionMenu = document.getElementById('navActionMenu');
     const navActionClose = document.getElementById('navActionClose');
 
+    const menuLinks = document.querySelectorAll('.menu__link');
+
     const openMenu = () => {
         const nav = document.querySelector('.nav');
         nav.classList.add('nav--open');
@@ -14,6 +16,10 @@ const header = () => {
 
     navActionMenu.addEventListener('click', openMenu);
     navActionClose.addEventListener('click', closeMenu);
+
+    menuLinks.forEach((element) => {
+        element.addEventListener('clicl', closeMenu);
+    });
 
 };
 
