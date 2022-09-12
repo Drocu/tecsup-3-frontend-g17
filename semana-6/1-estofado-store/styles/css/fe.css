@@ -34,6 +34,9 @@
   padding: 0;
   cursor: pointer;
 }
+.nav__action:hover {
+  color: gold;
+}
 @media (min-width: 768px) {
   .nav__action--menu, .nav__action--close {
     display: none;
@@ -130,6 +133,10 @@
 }
 .menu__link:hover:before {
   width: 100%;
+}
+
+.hero-slider {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=fe.css.map */
