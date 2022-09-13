@@ -1,5 +1,5 @@
 const slider = () => {
-    const swiper = new Swiper('#hero-slider', {
+    const swiper = new Swiper('#heroSlider', {
         effect: 'coverflow',
         speed: 1500,
         loop: true,
@@ -20,16 +20,18 @@ const slider = () => {
 
 
 
-      const mostSelled = new Swiper('#mostSelled', {
+      const mostSelledSlider = new Swiper('#mostSelledSlider', {
         loop: true,
-        allowSlideNext: 1,
+        speed: 500,
         navigation: {
           nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          prevEl: '.swiper-button-prev'
         },
+
         breakpoints: {
           768: {
             slidesPerView: 4,
+            spaceBetween: 16
           }
         }
       });

@@ -18,7 +18,7 @@
 <body class="body">
     <header class="header">
         <nav class="nav">
-            <div class="container container--header-nav ">
+            <div class="container elements elements--header-nav ">
                 <a href="./">
                     <img src="https://img.icons8.com/stickers/100/000000/lion.png" alt="leon_logo"  class="nav__logo"/>
                 </a>
@@ -36,7 +36,7 @@
         </nav>
     </header>
     <main>
-            <section class="swiper hero-slider" id="hero-slider">
+            <section class="swiper hero-slider" id="heroSlider">
                 <div class="swiper-wrapper">
                 <div class="swiper-slide section section--hero" 
                     style="background-image: url('https://images4.alphacoders.com/710/710615.jpg');"></div>
@@ -52,27 +52,72 @@
                 <div class="swiper-button-next"></div>
             </section>
 
-            <section>
-                <div class="container">
-                    <h2>Productos más vendidos</h2>
-                    <section class="swiper" id="mostSelled">
-                        <!-- Additional required wrapper -->
+            <section class="section">
+                <div class="container elements">
+                    <h2 class="section__title">Los más vendidos</h2>
+                    <section class="swiper most-selled-slider" id="mostSelledSlider">
                         <div class="swiper-wrapper">
-                          <!-- Slides -->
-                          <div class="swiper-slide">Slide 1</div>
-                          <div class="swiper-slide">Slide 2</div>
-                          <div class="swiper-slide">Slide 3</div>
-                          <div class="swiper-slide">Slide 4</div>
-                          <div class="swiper-slide">Slide 5</div>
-                          <div class="swiper-slide">Slide 6</div>
-                          <div class="swiper-slide">Slide 7</div>
-                          <div class="swiper-slide">Slide 8</div>
-                          <div class="swiper-slide">Slide 9</div>
-                          <div class="swiper-slide">Slide 10</div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="https://www.derkraemer.de/media/image/88/91/b3/Funko-POP-Luffy-in-Kimono-One-Piece.jpg" alt="producto 1" height="184" width="100%" class="card__header-img">
+                                    <div class="card__body">
+                                        <h4 class="card__subtitle"> Luffy samuray funko</h4>
+                                        <h3 class="card_title">Luffy</h3>
+                                        <h5 class="card_price-discount">S/ 50.00</h5>
+                                        <h6 class="card_price">Antes: S/ 100.00</h6>
+                                        <button class="button button--primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="https://th.bing.com/th/id/R.9d4695aaf073c1ab7090ab06d061385c?rik=MqO%2farFjeFrzvA&pid=ImgRaw&r=0" alt="producto 1" height="180" width="100%" class="card__header-img">
+                                    <div class="card__body">
+                                        <h4 class="card__subtitle"> Goku ssBlue funko</h4>
+                                        <h3 class="card_title">Goku</h3>
+                                        <h5 class="card_price-discount">S/ 50.00</h5>
+                                        <h6 class="card_price">Antes: S/ 100.00</h6>
+                                        <button class="button button--primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="https://cdn.shopify.com/s/files/1/0025/9384/9457/products/funko-pop-naruto-kakashi-pop-funko-436007_1198x1481.jpg?v=1590421457" alt="producto 1" height="180" width="100%" class="card__header-img">
+                                    <div class="card__body">
+                                        <h4 class="card__subtitle"> Kakashi chidori funko</h4>
+                                        <h3 class="card_title">Kakashi</h3>
+                                        <h5 class="card_price-discount">S/ 50.00</h5>
+                                        <h6 class="card_price">Antes: S/ 100.00</h6>
+                                        <button class="button button--primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="https://th.bing.com/th/id/OIP.9Eg6cK3hgvJgvG4LlI9KaAHaHa?pid=ImgDet&rs=1" alt="producto 1" height="180" width="100%" class="card__header-img">
+                                    <div class="card__body">
+                                        <h4 class="card__subtitle"> Zoro samuray funko</h4>
+                                        <h3 class="card_title">Zoro</h3>
+                                        <h5 class="card_price-discount">S/ 50.00</h5>
+                                        <h6 class="card_price">Antes: S/ 100.00</h6>
+                                        <button class="button button--primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img src="https://th.bing.com/th/id/OIP.AJsgOFtTP15onC5mieOoXgHaJZ?pid=ImgDet&w=630&h=800&rs=1" alt="producto 1" height="180" width="100%" class="card__header-img">
+                                    <div class="card__body">
+                                        <h4 class="card__subtitle"> Itachi Amaterasu funko</h4>
+                                        <h3 class="card_title">Itachi</h3>
+                                        <h5 class="card_price-discount">S/ 50.00</h5>
+                                        <h6 class="card_price">Antes: S/ 100.00</h6>
+                                        <button class="button button--primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- If we need pagination -->
-                        <!-- <div class="swiper-pagination"></div> -->
-                        <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                 </div>

@@ -48,12 +48,17 @@
   right: var(--padding-container);
 }
 
+.section {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  box-sizing: border-box;
+}
 .section--hero {
   position: relative;
-  min-height: 100vh;
   background-color: var(--primary-shadow-color);
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 .section--hero::before {
   content: "";
@@ -64,6 +69,19 @@
   bottom: 0;
   background-color: var(--reverse-primary-shadow-color);
 }
+.section__title {
+  color: var(--primary-highlight-color);
+  text-shadow: 0 0 0.125rem var(--primary-highlight-color), 0 0 0.25rem var(--primary-highlight-color);
+  font-weight: 800;
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+}
 
 .container {
   max-width: var(--max-width-container);
@@ -73,6 +91,21 @@
 }
 .container--header-nav {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: var(--padding-section);
+  width: 100%;
+}
+.elements--header-nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -137,6 +170,55 @@
 
 .hero-slider {
   height: 100vh;
+}
+
+.most-selled-slider {
+  width: 100%;
+}
+
+.card {
+  border-radius: var(--primary-border-radius);
+  overflow: hidden;
+}
+.card__header-img {
+  display: block;
+  height: 184px;
+  width: 100%;
+  object-fit: cover;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.125rem;
+  background-color: var(--secondary-theme-color);
+  padding: 0.5rem;
+}
+.card__subtitle {
+  margin: 0;
+}
+.card__title {
+  margin: 0;
+}
+.card__price-discount {
+  margin: 0;
+}
+.card__price {
+  margin: 0;
+}
+
+.button {
+  background-color: var(--primary-theme-color);
+  border: 0;
+  border-radius: var(--primary-border-radius);
+  color: var(--primary-text-color);
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+.button--primary {
+  background-color: var(--primary-highlight-color);
+  color: var(--reverse-primary-text-color);
 }
 
 /*# sourceMappingURL=fe.css.map */
