@@ -18,7 +18,7 @@ const header = () => {
     navActionClose.addEventListener('click', closeMenu);
 
     menuLinks.forEach((element) => {
-        element.addEventListener('clicl', closeMenu);
+        element.addEventListener('click', closeMenu);
     });
 
 };
