@@ -50,7 +50,7 @@ const card = () => {
     }
 
     try {
-      const { data } = await axios('https://pokeapi.co/api/v2/pokemon/30');
+      const { data } = await axios('https://pokeapi.co/api/v2/pokemon/6');
       renderPokemon(pokemonRemote, data);
     } catch (error) {
       console.log(error);
