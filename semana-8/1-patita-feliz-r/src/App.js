@@ -1,17 +1,29 @@
 
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import AppointmentsPage from './pages/AppointmentsPage';
+
 
 function App() {
+  const company = {
+    name: 'Veterinaria Patita Feliz',
+    slogan: '🐶 ¡La mejor veterinaria! Porque los amamos y los cuidamos. 🐶',
+  };
+
+  const credits = {
+    year: new Date().getFullYear(),
+    author: 'Rodrigo Aranda'
+  };
+
   return (
-    <header className="py-3 text-center">
-      <div className="container">
-        <div className="d-flex flex-column gap-1">
-          <h2 className="text-warning fs-2 m-0">Patita Feliz</h2>
-          <h1 className="text-light fs-5 m-0">🐶 Veterinaria en el Perú, que cuida de los tuyos 🐶</h1>
-        </div>
-        
-      </div>
-    </header>
+    <>
+      <Header company={company}/>
+      <main>
+        <AppointmentsPage />
+      </main>
+      <Footer credits ={credits}/>
+    </>
     
   );
 }
