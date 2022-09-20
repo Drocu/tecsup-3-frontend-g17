@@ -1,30 +1,27 @@
-
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Header from './components/sections/Header';
+import Footer from './components/sections/Footer';
 import AppointmentsPage from './pages/AppointmentsPage';
-
 
 function App() {
   const company = {
-    name: 'Veterinaria Patita Feliz',
-    slogan: '🐶 ¡La mejor veterinaria! Porque los amamos y los cuidamos. 🐶',
+    name: 'Patita Feliz',
+    slogan: '🐭 ¡La mejor veterinaria! Porque los amamos, los cuidamos 🐭'
   };
 
   const credits = {
     year: new Date().getFullYear(),
-    author: 'Rodrigo Aranda'
+    author: 'Elliot Garamendi'
   };
 
   return (
     <>
-      <Header company={company}/>
-      <main>
+      <Header company={company} />
+      <main className="overflow-hidden">
         <AppointmentsPage />
       </main>
-      <Footer credits ={credits}/>
+      <Footer credits={credits} />
     </>
-    
   );
 }
 
