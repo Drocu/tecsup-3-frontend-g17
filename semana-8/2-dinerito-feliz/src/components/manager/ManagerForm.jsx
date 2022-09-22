@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ManagerForm = ({ budget, expenseList, setExpenseList }) => {
+const ManagerForm = ({ setExpense  }) => {
   const [formExpense, setFormExpense] = useState({
     description: '',
     amount: ''
@@ -17,20 +17,17 @@ const ManagerForm = ({ budget, expenseList, setExpenseList }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setExpense(formExpense);
+
     setFormExpense({
       description: '',
       amount: ''
     });
-
-    setExpenseList([
-      ...expenseList,
-      formExpense
-    ]);
   };
 
   return (
     <section className="col-md-6 d-flex flex-column gap-3">
-      <h2 className="text-primary text-center m-0">💲 Registre sus egresos ({budget}) 💲</h2>
+      <h2 className="text-primary text-center m-0">💲 Registre sus egresos 💲</h2>
       <form
         onSubmit={handleSubmit}
       >
@@ -58,7 +55,7 @@ const ManagerForm = ({ budget, expenseList, setExpenseList }) => {
             required
             onInput={handleInput}
           />
-          <label htmlFor="formExpenseAmount">Cantidad</label>
+          <label htmlFor="formExpenseAmount">Egreso</label>
         </div>
         <button
           type="submit"

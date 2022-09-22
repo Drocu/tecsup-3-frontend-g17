@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const RegisterForm = ({ setBudget }) => {
+const RegisterForm = ({ recordAmount  }) => {
   const [formBudget, setFormBudget] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setBudget(formBudget);
+    recordAmount(formBudget);
   };
 
   const handleInput = (e) => {
@@ -13,8 +13,8 @@ const RegisterForm = ({ setBudget }) => {
   };
 
   return (
-    <div className="card">
-      <div className="card-body d-flex flex-column gap-3">
+    <div className="card w-75" style={{maxWidth:'512px'}}>
+      <div className="card-body d-flex flex-column gap-3 ">
         <h2 className="text-primary text-center m-0">Presupuesto</h2>
         <form
           onSubmit={handleSubmit}

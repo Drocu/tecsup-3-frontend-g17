@@ -1,10 +1,10 @@
 import RegisterForm from "../components/budget/RegisterForm";
 
-const RegisterPage = ({ setBudget }) => {
+const RegisterPage = ({ recordAmount  }) => {
   return (
-    <section className="py-3">
-      <div className="container">
-        <RegisterForm setBudget={setBudget} />
+    <section className="py-3 animate__animated animate__bounceIn">
+      <div className="container d-flex justify-content-center">
+        <RegisterForm recordAmount ={recordAmount } />
       </div>
     </section>
   );

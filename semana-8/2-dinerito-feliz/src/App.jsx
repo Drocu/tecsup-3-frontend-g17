@@ -13,17 +13,32 @@ function App() {
 
   const credits = {
     year: new Date().getFullYear(),
-    author: 'Elliot Garamendi'
+    author: 'Rodrigo Aranda'
   };
 
   const [budget, setBudget] = useState(0);
-  const [expenseList, setExpenseList] = useState([]);
+  const [remaining, setRemaining] = useState(0);
+  const [expense, setExpense] = useState({
+    description: '',
+    amount: ''
+  });
+  const [expenses, setExpenses] = useState([]);
+
+  const recordAmount = (amount) => {
+    setBudget(amount);
+    setRemaining(amount);
+  };
 
   useEffect(() => {
-    if (budget) {
-      setBudget(budget - expenseList[(expenseList.length - 1)].amount);
+    if (expense.amount) {
+      setExpenses([
+        ...expenses,
+        expense
+      ]);
+      setRemaining(remaining - expense.amount);
+      setExpense({ description: '', amount: '' });
     }
-  }, [expenseList]);
+  }, [expense]);
 
   return (
     <>
@@ -31,12 +46,15 @@ function App() {
       <main>
         {
           budget <= 0 ?
-            <RegisterPage setBudget={setBudget} />
+            <RegisterPage
+              recordAmount={recordAmount}
+            />
             :
             <ManagerPage
               budget={budget}
-              expenseList={expenseList}
-              setExpenseList={setExpenseList}
+              remaining={remaining}
+              setExpense={setExpense}
+              expenses={expenses}
             />
         }
       </main>
