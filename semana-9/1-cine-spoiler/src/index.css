@@ -13,7 +13,7 @@
   --secondary-highlight-color: gold;
   --primary-button-color: #61dafb;
   --secondary-button-color: gold;
-  --primary-font-family: 'Open Sans', sans-serif;
+  --primary-font-family: 'Noto Sans', sans-serif;
   --max-width-container: 512px;
   --padding-section: 1.5rem;
   --padding-container: 1rem;
@@ -25,4 +25,11 @@
     --padding-section: 2rem;
     --padding-container: 0.75rem;
   }
+}
+
+.body{
+  background-color: var(--primary-theme-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+  margin: 0;
 }

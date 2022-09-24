@@ -1,0 +1,36 @@
+.menu {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    &__link {
+      position: relative;
+      color: var(--primary-text-color);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.25s, filter 0.25s;
+  
+      &--active,
+      &:hover {
+        color: var(--primary-highlight-color);
+      }
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        width: 0;
+        height: 0.0625rem;
+        background-color: var(--secondary-highlight-color);
+        transition: width 0.25s;
+      }
+  
+      &--active::before,
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
