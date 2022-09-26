@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
+import { Link } from 'react-router-dom';
 // https://image.tmdb.org/t/p/w1280
 
 const HomeHero = ({movies}) => {
@@ -30,7 +31,7 @@ const HomeHero = ({movies}) => {
                         <div className="card">
                             <h2 className="card__title">{title}</h2>
                             <h4 className="card__text">{overview}</h4>
-                            <button className="button button--primary">Ver más</button>
+                            <Link to={`/peliculas/${id}`} className="button button--primary">Ver más</Link>
                         </div>
 
                     </div>

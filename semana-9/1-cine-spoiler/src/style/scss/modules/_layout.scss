@@ -12,6 +12,10 @@
         min-height: 75vh;
         background-color: var(--secondary-shadow-color);
 
+        @include desktop{
+            background-image: var(--desktop-image);
+        }
+
         &::before{
             content: '';
             position: absolute;
@@ -36,13 +40,6 @@
     }
 }
 
-@media (min-width: 768px){
-    .section{
-        &--hero{
-            background-image: var(--desktop-image);
-        }
-    }
-}
 .container{
     max-width: var(--max-width-container);
     margin: 0 auto;
@@ -52,8 +49,8 @@
     &--hero{
         z-index: 5;
         max-width: 100%;
-        padding-left: calc(var(--padding-container) * 2.5);
-        padding-right: calc(var(--padding-container) * 2.5);
+        padding-left: calc(var(--padding-container) * 4);
+        padding-right: calc(var(--padding-container) * 4);
     }
 }
 

@@ -2,20 +2,27 @@
     @include d-flex-fd-ai-jc-g(column,flex-start);
     gap: 1rem;
     max-width: 400px;
+
+    @include desktop{
+        max-width: 768px;
+    }
     
     &__title{
         font-size: 2rem;
         font-weight: 900;
         margin: 0;
+
+        @include desktop{
+            font-size: 3rem;
+        }
     }
 
     &__text{
         margin: 0;
+
+        @include desktop{
+            font-size: 1.125rem;;
+        }
     }
 }
 
-@media(min-width: 768px){
-    .card{
-        max-width: 768px;
-    }
-}
