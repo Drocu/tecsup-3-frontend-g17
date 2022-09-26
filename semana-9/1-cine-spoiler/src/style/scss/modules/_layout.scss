@@ -55,9 +55,10 @@
 }
 
 .elements{
-    @include d-flex-fd-ai-jc-g;
+    @include d-flex-fd-ai-jc-g(column, stretch, flex-start, 1rem);
 
     &--header-nav{
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }

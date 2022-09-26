@@ -5,7 +5,10 @@ export const MoviesContext = createContext();
 
 export const MoviesProvider = ({ children }) => {
 
+  
+  const [movie, setMovie] = useState({});
   const [movies, setMovies] = useState([]);
+  
 
   const readMovies = async () => {
     try {
@@ -20,12 +23,28 @@ export const MoviesProvider = ({ children }) => {
     }
   };
 
+  const readMovie = async (id) => {
+    try {
+      const options = {
+        method: 'GET',
+        url: `/movie/${id}`
+      };
+      const { data } = await axiosInstance(options);
+      setMovie(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
 
   return (
     <MoviesContext.Provider
       value={{
-        movies,readMovies
+        movie,
+        movies,
+        readMovies,
+        readMovie
       }}
     >
       {children}

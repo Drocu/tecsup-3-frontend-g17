@@ -10,6 +10,7 @@ const HomePage = () => {
     readMovies();
     // eslint-disable-next-line
 }, []);
+
     return (
       <HomeHero movies={movies}/>         
     );
