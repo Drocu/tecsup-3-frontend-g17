@@ -5,9 +5,7 @@
 
     &--hero{
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex-fd-ai-jc-g(row,center);
         background-image: var(--mobile-image);
         background-size: cover;
         background-position: center;
@@ -60,7 +58,7 @@
 }
 
 .elements{
-    display: flex;
+    @include d-flex-fd-ai-jc-g;
 
     &--header-nav{
         align-items: center;

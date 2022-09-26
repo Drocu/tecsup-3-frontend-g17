@@ -1,7 +1,5 @@
 .card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include d-flex-fd-ai-jc-g(column,flex-start);
     gap: 1rem;
     max-width: 400px;
     

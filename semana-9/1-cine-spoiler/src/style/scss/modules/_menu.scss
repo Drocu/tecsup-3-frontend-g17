@@ -1,5 +1,5 @@
 .menu {
-    display: flex;
+    @include d-flex-fd-ai-jc-g;
     gap: 1rem;
     margin: 0;
     padding: 0;
