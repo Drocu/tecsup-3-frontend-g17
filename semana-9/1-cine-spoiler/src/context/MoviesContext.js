@@ -1,5 +1,5 @@
 import axiosInstance from "../config/axiosInstance";
-const { createContext, useState, useEffect } = require("react");
+const { createContext, useState } = require("react");
 
 export const MoviesContext = createContext();
 
@@ -14,21 +14,18 @@ export const MoviesProvider = ({ children }) => {
         url: '/discover/movie?page=1'
       };
       const { data } = await axiosInstance(options);
-      console.log(data);
-      setMovies(data);
+      setMovies(data.results);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    readMovies();
-  }, []);
+
 
   return (
     <MoviesContext.Provider
       value={{
-        movies
+        movies,readMovies
       }}
     >
       {children}

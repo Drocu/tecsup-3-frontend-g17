@@ -1,0 +1,42 @@
+.button {
+    background-color: var(--primary-theme-color);
+    border: 0.0625rem solid var(--primary-theme-color);
+    border-radius: var(--primary-border-radius);
+    color: var(--reverse-primary-text-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: var(--primary-font-family);
+    margin: 0;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: box-shadow 0.25s, filter 0.25s;
+  
+    @include desktop {
+      font-size: 1rem;
+    }
+  
+    &:hover {
+      box-shadow: 0 0 0.125rem 0.125rem var(--primary-theme-color);
+      filter: contrast(1.125);
+    }
+  
+    &--primary {
+      background-color: var(--primary-button-color);
+      border: var(--primary-button-color);
+  
+      &:hover {
+        box-shadow: 0 0 0.125rem 0.125rem var(--primary-button-color);
+      }
+    }
+  
+    &--secondary {
+      background-color: var(--secondary-button-color);
+      border: var(--secondary-button-color);
+  
+      &:hover {
+        box-shadow: 0 0 0.125rem 0.125rem var(--secondary-button-color);
+      }
+    }
+  }

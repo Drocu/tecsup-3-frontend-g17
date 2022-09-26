@@ -5,10 +5,10 @@ const PrimaryLayout = () => {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: '4rem' }}>
+      <main>
         <Outlet />
       </main>
-      <footer>Eliot Garamendi</footer>
+      <footer>Rodrigo Aranda</footer>
     </>
   );
 };
