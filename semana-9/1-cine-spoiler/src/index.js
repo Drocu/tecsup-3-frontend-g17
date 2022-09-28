@@ -10,6 +10,7 @@ import './style/css/SwiperSlider.css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import 'moment/locale/es';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

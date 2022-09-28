@@ -1,27 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+<html lang="es">
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Sin E Spoiler</title>
 
-    <title>Cine Spoiler</title>
-  </head>
-  <body class="body">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  </body>
+  <style>
+    :root {
+      scroll-behavior: smooth;
+      --primary-theme-color: #20232a;
+      --secondary-theme-color: #282c34;
+      --primary-text-color: #fff;
+      --secondary-text-color: #999;
+      --reverse-primary-text-color: #000;
+      --primary-shadow-color: #ffffff80;
+      --secondary-shadow-color: #ffffff40;
+      --reverse-primary-shadow-color: #00000080;
+      --reverse-secondary-shadow-color: #00000040;
+      --primary-highlight-color: #61dafb;
+      --secondary-highlight-color: gold;
+      --primary-button-color: #61dafb;
+      --secondary-button-color: gold;
+      --primary-font-family: 'Noto Sans', sans-serif;
+      --max-width-container: 512px;
+      --padding-section: 1.5rem;
+      --padding-container: 1rem;
+      --primary-border-radius: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      :root {
+        --max-width-container: 1024px;
+        --padding-section: 2rem;
+        --padding-container: 0.75rem;
+      }
+    }
+
+    .body {
+      background-color: var(--primary-theme-color);
+      color: var(--primary-text-color);
+      font-family: var(--primary-font-family);
+      margin: 0;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.25s;
+    }
+
+    .loader--hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader--remove {
+      display: none;
+    }
+
+    .loader--component {
+      z-index: 15;
+      background-color: var(--reverse-primary-shadow-color);
+    }
+    
+    .loader__spinner {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .loader__spinner::before,
+    .loader__spinner::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .loader__spinner::before {
+      box-shadow: 0 0 0.25rem 0.25rem var(--secondary-shadow-color) inset;
+    }
+
+    .loader__spinner::after {
+      box-shadow: 0 0.25rem 0 0 var(--primary-highlight-color) inset;
+      animation: rotate 1s linear infinite;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <section class="loader" id="loader">
+    <div class="loader__spinner"></div>
+  </section>
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root" class="root"></div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.classList.add('loader--hide');
+
+      setTimeout(() => {
+        loader.classList.add('loader--remove');
+      }, 1000);
+    });
+  </script>
+</body>
 </html>

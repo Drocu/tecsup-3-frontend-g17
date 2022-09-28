@@ -1,28 +1,134 @@
-.card{
-    @include d-flex-fd-ai-jc-g(column,flex-start);
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min(100%, 200px));
+  justify-content: center;
+  gap: 1rem;
+
+  @include desktop {
+    gap: 2rem;
+  }
+}
+
+.card {
+  @include d-flex-fd-ai-jc-g(column, flex-start);
+  border-radius: var(--primary-border-radius);
+
+  &--hero {
     gap: 1rem;
     max-width: 400px;
 
-    @include desktop{
-        max-width: 768px;
+    @include desktop {
+      max-width: 768px;
     }
+  }
+
+  &--movies {
+    overflow: hidden;
+    max-width: 512px;
+  }
+
+  &--movie {
+    margin: 0 auto;
+  }
+
+  &__header {
+    // min-height: 128px;
+    overflow: hidden;
+  }
+
+  &__header-img {
+    display: block;
+    background-color: var(--secondary-shadow-color);
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+    transition: transform 0.25s;
+
+    &:hover {
+      transform: scale(1.125);
+    }
+  }
+
+  &__body {
+    @include d-flex-fd-ai-jc-g(column, stretch, flex-start, 1rem);
+    background-color: var(--secondary-theme-color);
+    width: 100%;
+    // height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    &--movie {
+      box-shadow: 1rem 1rem 0 0 var(--primary-highlight-color);
+      transition: box-shadow 0.25s;
+
+      &:hover {
+        box-shadow: -1rem -1rem 0 0 var(--secondary-highlight-color);
+      }
+
+      @include desktop {
+        padding: 2rem;
+      }
+    }
+
+    &--movies {
+      height: 95px;
+
+      @include desktop {
+        height: 105px;
+      }
+    }
+  }
+
+
+
+  &__img {
+    align-self: center;
+    width: 256px;
+    height: 384px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+
+    @include desktop {
+      font-size: 1.75rem;
+    }
+
+    &--hero {
+      font-size: 2rem;
+
+      @include desktop {
+        font-size: 3rem;
+
+        &--movies {
+          text-align: center;
+          font-size: 1.25rem;
     
-    &__title{
-        font-size: 2rem;
-        font-weight: 900;
-        margin: 0;
-
-        @include desktop{
-            font-size: 3rem;
+          @include desktop {
+            font-size: 1.375rem;
+          }
         }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    margin: 0;
+
+    @include desktop {
+      font-size: 1rem;
     }
 
-    &__text{
-        margin: 0;
+    &--hero {
+      font-size: 1rem;
 
-        @include desktop{
-            font-size: 1.125rem;;
-        }
+      @include desktop {
+        font-size: 1.125rem;
+      }
     }
+  }
 }
-

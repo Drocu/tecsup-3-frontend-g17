@@ -5,13 +5,15 @@ export const MoviesContext = createContext();
 
 export const MoviesProvider = ({ children }) => {
 
-  
+  // eslint-disable-next-line
+  const [loading, setLoading] = useState(false);  
   const [movie, setMovie] = useState({});
   const [movies, setMovies] = useState([]);
   
 
   const readMovies = async () => {
     try {
+      setLoading(true);
       const options = {
         method: 'GET',
         url: '/discover/movie?page=1'
@@ -20,11 +22,14 @@ export const MoviesProvider = ({ children }) => {
       setMovies(data.results);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   const readMovie = async (id) => {
     try {
+      setLoading(true);
       const options = {
         method: 'GET',
         url: `/movie/${id}`
@@ -33,6 +38,8 @@ export const MoviesProvider = ({ children }) => {
       setMovie(data);
     } catch (error) {
       console.log(error);
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -43,6 +50,7 @@ export const MoviesProvider = ({ children }) => {
       value={{
         movie,
         movies,
+        setMovie,
         readMovies,
         readMovie
       }}

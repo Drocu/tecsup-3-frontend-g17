@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/section/Footer";
 import Header from "../components/section/Header";
 
 const PrimaryLayout = () => {
@@ -8,7 +9,7 @@ const PrimaryLayout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>Rodrigo Aranda</footer>
+      <Footer />
     </>
   );
 };
